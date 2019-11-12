@@ -19,33 +19,44 @@ public class MoneyTransfer {
 
     private String target;
 
-    private int user_id;
+    private int userId;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", referencedColumnName = "id", nullable = false, updatable = false, insertable = false)
+    @JoinColumn(name = "userId", referencedColumnName = "id", nullable = false, updatable = false, insertable = false)
     private User user;
 
-    private int moneyAmount;
+    private String operationId;
+
+    private String surveyId;
+
+    @Enumerated(EnumType.ORDINAL)
+    private MoneyTransferStatus status;
+
+    private double moneyAmount;
     private Timestamp createDt;
+
+
 
     public MoneyTransfer() {
     }
 
-    public MoneyTransfer(MoneyTransferEvent event, String target, int user_id, int moneyAmount, Timestamp createDt) {
+    public MoneyTransfer(MoneyTransferEvent event, String target, int userId, MoneyTransferStatus status, double moneyAmount, Timestamp createDt) {
         this.event = event;
         this.target = target;
-        this.user_id = user_id;
+        this.userId = userId;
+        this.status = status;
         this.moneyAmount = moneyAmount;
         this.createDt = createDt;
     }
 
+
     @Override
     public int hashCode() {
-        return Objects.hash(id, event, target, user_id, moneyAmount, createDt);
+        return Objects.hash(id, event, target, userId, moneyAmount, createDt);
     }
 
     @Override
     public String toString() {
-        return "Wa";
+        return "Money Transfer Object id: " + id;
     }
 }

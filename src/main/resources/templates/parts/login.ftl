@@ -1,4 +1,5 @@
 <#macro login>
+    <h6 class="mb-4">Login</h6>
     <#if RequestParameters.error??>
         <div class="alert alert-danger" role="alert">
             Bad Credentials.

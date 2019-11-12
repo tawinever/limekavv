@@ -29,7 +29,7 @@
                 <constraints nullable="false"/>
             </column>
 
-            <column name="role" type="BIGINT" defaultValue="0" >
+            <column name="role" type="VARCHAR(100)" defaultValue="USER" >
                 <constraints nullable="false"/>
             </column>
 
@@ -62,22 +62,51 @@
                 <constraints nullable="false" foreignKeyName="fk_money_transfer_usr" references="usr(id)"/>
             </column>
 
-            <column name="money_amount" type="BIGINT">
+            <column name="money_amount" type="DOUBLE">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="operation_id" type="VARCHAR(255)" />
+
+            <column name="survey_id" type="VARCHAR(255)" />
+
+            <column name="status" type="BIGINT" >
                 <constraints nullable="false" />
             </column>
 
             <column name="create_dt" type="DATETIME" >
                 <constraints nullable="false" />
             </column>
+
         </createTable>
     </changeSet>
     
-<!--    <changeSet id="create Role Table" author="rauan">-->
-<!--        <comment>Создаем таблицу для Ролей</comment>-->
-<!--        <createTable tableName="role">-->
-<!--            <column></column>-->
-<!--        </createTable>    -->
-<!--    </changeSet>-->
+    <changeSet id="create Table Withdrawal Block" author="rauan">
+        <comment>Создаем таблицу для блокирование пользователя от вывода денег во время выведение денег</comment>
+        <createTable tableName="withdrawal_status">
+            <column name="user_email" type="varchar(100)">
+                <constraints nullable="false" foreignKeyName="fk_money_transfer_usr" references="usr(email)"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="seed User table with Admin" author="rauan">
+        <comment>Добавим Админа</comment>
+        <insert tableName="usr">
+            <column name="role" value="ROLE_ADMIN"/>
+
+
+            <column name="name" value="admin"/>
+            <column name="email" value="admin"/>
+
+            <column name="password" value="admin"/>
+            <column name="status" value="1"/>
+
+            <column name="phone" value="000"/>
+
+
+        </insert>
+    </changeSet>
 
 
 

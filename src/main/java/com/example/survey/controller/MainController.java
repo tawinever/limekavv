@@ -1,11 +1,12 @@
 package com.example.survey.controller;
 
-import com.example.survey.domain.MoneyTransfer;
-import com.example.survey.domain.Role;
 import com.example.survey.domain.User;
 import com.example.survey.dto.MoneyTransferDto;
 import com.example.survey.dto.ProfileDto;
+import com.example.survey.service.MoneyTransferService;
+import com.example.survey.withdrawal.WithdrawalService;
 import com.example.survey.repository.UserRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.MediaType;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -14,17 +15,21 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
+import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 
+@Slf4j
 @Controller
 public class MainController {
     private final UserRepository userRepository;
+    private final WithdrawalService withdrawalService;
+    private final MoneyTransferService moneyTransferService;
 
-    public MainController(UserRepository userRepository) {
+    public MainController(UserRepository userRepository, WithdrawalService withdrawalService, MoneyTransferService moneyTransferService) {
         this.userRepository = userRepository;
+        this.withdrawalService = withdrawalService;
+        this.moneyTransferService = moneyTransferService;
     }
 
 
@@ -33,38 +38,35 @@ public class MainController {
     public String dashboard(@AuthenticationPrincipal UserDetails user, Model model) {
         //todo figure out is it allowed to write private methods in controller
 
-        User domainUser = userRepository.findByEmail(user.getUsername());
-        List<MoneyTransferDto> bills = domainUser.getBills().stream()
-                .map(this::convertIntoDto)
-                .collect(Collectors.toList());
-        int balance = bills.stream().mapToInt(MoneyTransferDto::getMoneyAmount).sum();
+        List<MoneyTransferDto> bills = moneyTransferService.getMoneyTransfer(user.getUsername());
+        double balance = moneyTransferService.getBalance(user.getUsername());
 
         model.addAttribute("balance", balance);
+        Collections.reverse(bills);
         model.addAttribute("bills", bills);
         model.addAttribute("email", user.getUsername());
         for (GrantedAuthority auth : user.getAuthorities()) {
-            model.addAttribute("role", Role.values()[Integer.parseInt(auth.getAuthority())]);
+            log.info(auth.toString());
+            log.info(auth.getAuthority());
         }
-
-
-
         return "dashboard";
     }
 
-    private MoneyTransferDto convertIntoDto(MoneyTransfer mt) {
-        return  new MoneyTransferDto(
-                mt.getId(),
-                mt.getEvent().toString(),
-                mt.getTarget(),
-                mt.getCreateDt(),
-                mt.getMoneyAmount()
-        );
-    }
+
 
     @GetMapping("/profile")
     public String profile(@AuthenticationPrincipal UserDetails user, Model model) {
         User curUser = userRepository.findByEmail(user.getUsername());
         model.addAttribute("usr", curUser);
+//        try {
+//            MobileWallet wallet = new MobileWallet();
+//            wallet.setOperator(Operator.ACTIV);
+//            wallet.setPhoneNumber("7024155172");
+//            PaymentProcessing pp = withdrawalService.sendMoney(wallet,50);
+//            log.info("Payment operation id : {}", pp.getProcessId() );
+//        } catch (CannotAuthenticateException | RefusedPaymentException e) {
+//            e.printStackTrace();
+//        }
         return "profile";
     }
 

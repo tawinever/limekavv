@@ -11,4 +11,5 @@ public class SurveyPaymentDto {
     private String surveyName;
     private int surveyId;
     private int moneyAmount;
+    private String token;
 }

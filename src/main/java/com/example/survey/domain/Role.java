@@ -1,5 +1,5 @@
 package com.example.survey.domain;
 
 public enum Role {
-    USER, ADMIN;
+    ROLE_USER, ROLE_ADMIN;
 }

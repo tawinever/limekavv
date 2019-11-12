@@ -46,7 +46,11 @@
                                 <p class="mb-1 text-muted text-small w-15 w-xs-100">${bill.event}</p>
                                 <p class="mb-1 text-muted text-small w-15 w-xs-100">${bill.createDt}</p>
                                 <div class="w-15 w-xs-100">
-                                    <span class="badge badge-pill badge-primary">+ ${bill.moneyAmount}</span>
+                                    <#if bill.moneyAmount gt 0 >
+                                        <span class="badge badge-pill badge-outline-primary">${bill.moneyAmount}</span>
+                                    <#else>
+                                        <span class="badge badge-pill badge-outline-danger">${bill.moneyAmount}</span>
+                                    </#if>
                                 </div>
                             </div>
                         </div>

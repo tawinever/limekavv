@@ -40,4 +40,24 @@ body.show-spinner::before{
   }
 }
 
+/*
+Rauan added Form Data Table Customization
+*/
+
+.dt-buttons.btn-group {
+  float: left;
+}
+table.dataTable tbody td {
+  padding: 8px 10px;
+}
+
+table.dataTable tr.odd {
+  background-color: #f9f9f9;
+}
+
+table.dataTable td.sorting_1 {
+  background-color: #2992d5;
+  color: white;
+}
+
 

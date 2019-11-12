@@ -13,12 +13,12 @@ public class MoneyTransferDto {
     private String event;
     private String target;
     private Timestamp createDt;
-    private int moneyAmount;
+    private double moneyAmount;
 
     public MoneyTransferDto() {
     }
 
-    public MoneyTransferDto(int id, String event, String target, Timestamp createDt, int moneyAmount) {
+    public MoneyTransferDto(int id, String event, String target, Timestamp createDt, double moneyAmount) {
         this.id = id;
         this.event = event;
         this.target = target;
