@@ -1,6 +1,7 @@
 package com.example.survey.controller;
 
 import com.example.survey.domain.User;
+import com.example.survey.dto.IinDto;
 import com.example.survey.dto.MoneyTransferDto;
 import com.example.survey.dto.ProfileDto;
 import com.example.survey.service.MoneyTransferService;
@@ -15,7 +16,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.ModelAndView;
 
+import javax.validation.Valid;
 import java.util.Collections;
 import java.util.List;
 
@@ -58,15 +61,6 @@ public class MainController {
     public String profile(@AuthenticationPrincipal UserDetails user, Model model) {
         User curUser = userRepository.findByEmail(user.getUsername());
         model.addAttribute("usr", curUser);
-//        try {
-//            MobileWallet wallet = new MobileWallet();
-//            wallet.setOperator(Operator.ACTIV);
-//            wallet.setPhoneNumber("7024155172");
-//            PaymentProcessing pp = withdrawalService.sendMoney(wallet,50);
-//            log.info("Payment operation id : {}", pp.getProcessId() );
-//        } catch (CannotAuthenticateException | RefusedPaymentException e) {
-//            e.printStackTrace();
-//        }
         return "profile";
     }
 
@@ -82,4 +76,22 @@ public class MainController {
         model.addAttribute("usr", curUser);
         return "profile";
     }
+
+    @PostMapping(value = "/updateIin", consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
+    public ModelAndView setIin(
+            @AuthenticationPrincipal UserDetails user,
+            Model model,
+            @Valid IinDto iin) {
+        User curUser = userRepository.findByEmail(user.getUsername());
+
+        if (curUser.getIin() != null) {
+            return new ModelAndView("redirect:/profile");
+        }
+        curUser.setIin(iin.getIin());
+        userRepository.save(curUser);
+
+        return new ModelAndView("redirect:/profile");
+    }
+
+
 }

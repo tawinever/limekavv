@@ -33,6 +33,13 @@
                                 <span>email</span>
                             </label>
 
+                            <#if usr.getIin()??>
+                            <label class="form-group has-float-label">
+                                <input class="form-control"  value="${usr.getIin()}" readonly/>
+                                <span>iin</span>
+                            </label>
+                            </#if>
+
                             <label class="form-group has-float-label">
                                 <input class="form-control"  value="${usr.getPhone()}" name="phone" id="phone-number"
                                        data-mask="+7(700)-000-00-00"/>

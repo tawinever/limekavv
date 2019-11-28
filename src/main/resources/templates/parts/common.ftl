@@ -366,3 +366,43 @@
 
     </html>
 </#macro>
+
+<#macro promo>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Promo page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="font/iconsmind/style.css" />
+        <link rel="stylesheet" href="font/simple-line-icons/css/simple-line-icons.css" />
+
+        <link rel="stylesheet" href="css/vendor/bootstrap-stars.css" />
+        <link rel="stylesheet" href="css/vendor/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/vendor/owl.carousel.min.css" />
+
+        <link rel="stylesheet" href="css/vendor/bootstrap-float-label.min.css" />
+        <link rel="stylesheet" href="css/main.css" />
+
+    </head>
+
+    <body class="show-spinner">
+    <div class="landing-page">
+        <#nested>
+    </div>
+
+    <script src="js/vendor/jquery-3.3.1.min.js" ></script>
+    <script src="js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="js/vendor/owl.carousel.min.js"></script>
+    <script src="js/vendor/jquery.barrating.min.js"></script>
+    <script src="js/vendor/jquery.barrating.min.js"></script>
+    <script src="js/vendor/landing-page/headroom.min.js"></script>
+    <script src="js/vendor/landing-page/jQuery.headroom.js"></script>
+    <script src="js/vendor/landing-page/jquery.scrollTo.min.js"></script>
+    <script src="js/dore.scripts.landingpage.js"></script>
+    <script src="js/scripts.js"></script>
+    </body>
+
+    </html>
+</#macro>

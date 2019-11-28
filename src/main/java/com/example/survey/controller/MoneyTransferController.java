@@ -2,6 +2,7 @@ package com.example.survey.controller;
 
 import com.example.survey.dto.MobileWithdrawalDto;
 import com.example.survey.service.MoneyTransferService;
+import com.example.survey.service.UserService;
 import com.example.survey.withdrawal.exception.CannotAuthenticateException;
 import com.example.survey.withdrawal.exception.NotEnoughMoneyException;
 import com.example.survey.withdrawal.exception.RefusedPaymentException;
@@ -25,11 +26,16 @@ public class MoneyTransferController {
     @Autowired
     MoneyTransferService moneyTransferService;
 
+    @Autowired
+    UserService userService;
+
 
     @GetMapping("")
     public String main(@AuthenticationPrincipal UserDetails user, Model model) {
         model.addAttribute("balance", moneyTransferService.getBalance(user.getUsername()));
-        return "transfer";
+        if (userService.isUserAllowedWithdraw(user.getUsername()))
+            return "transfer";
+        return "blocked";
     }
 
     @PostMapping(value = "", consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)

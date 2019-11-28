@@ -11,7 +11,7 @@ import java.util.Set;
 public class User {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    private int id;
+    private Long id;
 
     private String surname;
     private String name;
@@ -30,8 +30,13 @@ public class User {
     private String phone;
     private String phone2;
 
+    private String iin;
+
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private Set<MoneyTransfer> bills;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private Set<Ticket> tickets;
 
     public User() {
     }

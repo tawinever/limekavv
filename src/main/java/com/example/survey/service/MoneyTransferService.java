@@ -55,12 +55,12 @@ public class MoneyTransferService {
     //since spring cache getBalance before withdrawal, we need some how purge cache but I dont have time to research it
     public Double hetBalance(String userEmail) {
         User userDomain = userRepository.findByEmail(userEmail);
-        return moneyTransferRepository.getBalance(userDomain.getId());
+        return moneyTransferRepository.getBalance(userDomain.getId().intValue());
     }
 
     private List<MoneyTransfer> getMoneyTransferPrivate(String userEmail) {
         User domainUser = userRepository.findByEmail(userEmail);
-        return moneyTransferRepository.findByUserId(domainUser.getId()).stream()
+        return moneyTransferRepository.findByUserId(domainUser.getId().intValue()).stream()
                 .filter(bill -> bill.getStatus()!= MoneyTransferStatus.FAILED)
                 .collect(Collectors.toList());
     }
@@ -94,7 +94,7 @@ public class MoneyTransferService {
         MoneyTransfer mt = new MoneyTransfer(
                 MoneyTransferEvent.WITHDRAW,
                 withdrawalDto.toInlineString(),
-                domainUser.getId(),
+                domainUser.getId().intValue(),
                 MoneyTransferStatus.IN_PROCESS,
                 withdrawalDto.getAmount() * (-1),
                 new Timestamp((new Date()).getTime())

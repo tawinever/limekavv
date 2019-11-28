@@ -54,7 +54,7 @@ public class ApiController {
         MoneyTransfer mt = new MoneyTransfer(
                 MoneyTransferEvent.FINISHED_SURVEY,
                 surveyPaymentDto.getSurveyName(),
-                user.getId(),
+                Math.toIntExact(user.getId()),
                 MoneyTransferStatus.SUCCESS,
                 surveyPaymentDto.getMoneyAmount(),
                 new Timestamp((new Date()).getTime())

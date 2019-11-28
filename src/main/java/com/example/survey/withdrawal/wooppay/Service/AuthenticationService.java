@@ -30,14 +30,14 @@ public class AuthenticationService {
 
     public AccessToken authenticate() throws CannotAuthenticateException {
         AuthCredentials auth = new AuthCredentials(login, password);
-        ResponseEntity<String> response = makeRequest(authUrl, auth);
+        ResponseEntity<String> response = makeRequest(auth);
         return handleResponse(response);
     }
 
-    private ResponseEntity<String> makeRequest(String url, AuthCredentials auth) throws CannotAuthenticateException {
+    private ResponseEntity<String> makeRequest(AuthCredentials auth) throws CannotAuthenticateException {
         try {
             return restTemplate.postForEntity(
-                    url,
+                    com.example.survey.withdrawal.wooppay.WooppayGlobals.authUrl,
                     optionsProvider.getOptions(AuthCredentialsMapper.convertIntoJSON(auth), null),
                     String.class);
         } catch (Exception e) {
