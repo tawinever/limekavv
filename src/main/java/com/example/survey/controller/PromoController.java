@@ -14,6 +14,7 @@ import com.example.survey.service.UserService;
 import com.sun.javaws.exceptions.InvalidArgumentException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.support.DefaultMessageSourceResolvable;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
@@ -42,6 +43,9 @@ public class PromoController {
     @Autowired
     EmailService emailService;
 
+    @Value("${lime.start.id}")
+    protected String initSurveyId;
+
     @GetMapping("/promo")
     public String getPromo(Model model) {
         log.info("IN PromoController - getPromo");
@@ -66,7 +70,7 @@ public class PromoController {
 
         try {
             User user = userService.createNewUser(usr);
-            surveyService.inviteUserToSurvey(user.getId());
+            surveyService.inviteUserToSurvey(user.getId(), Integer.parseInt(initSurveyId));
             String text = emailService.textBuilder(user.getEmail(), user.getPassword());
             emailService.sendSimpleMessage(user.getEmail(), "First letter", text);
         } catch (Exception | CannotAuthenticateException  | FailedHttpRequestException | CannotParseException e) {

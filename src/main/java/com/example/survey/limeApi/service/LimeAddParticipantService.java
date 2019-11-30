@@ -18,17 +18,17 @@ import java.util.Map;
 @Service
 public class LimeAddParticipantService extends LimeService {
 
-    public String addParticipant(String sessionKey, String email, String firstName) throws CannotAddParticipantException {
+    public String addRespondent(String sessionKey, String email, String firstName, int surveyId) throws CannotAddParticipantException {
         //JSON PayLoad
         Map<String, String> participant = new HashMap<>();
         participant.put("email", email);
-        participant.put("firstName", firstName);
+        participant.put("firstname", firstName);
         List<Map<String, String>> partAr = new ArrayList<>();
         partAr.add(participant);
 
         Map<String, Object> payLoad = new HashMap<>();
         payLoad.put("method", "add_participants");
-        payLoad.put("params", new Object[]{sessionKey, initSurveyId, partAr});
+        payLoad.put("params", new Object[]{sessionKey, surveyId, partAr});
         payLoad.put("id", "1");
 
         //making http request
@@ -40,7 +40,7 @@ public class LimeAddParticipantService extends LimeService {
         //parsing response JSON
         List<Token> res = handleResponse(ans);
 
-        return baseUrl + initSurveyId + "?token=" + res.get(0).getToken();
+        return baseUrl + surveyId + "?token=" + res.get(0).getToken();
     }
 
     private List<Token> handleResponse(ResponseEntity<String> response) throws CannotAddParticipantException {

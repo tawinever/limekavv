@@ -25,7 +25,7 @@
 
                             <label class="form-group has-float-label">
                                 <input class="form-control"  value="${usr.getName()}" name="name"/>
-                                <span>Name</span>
+                                <span>name</span>
                             </label>
 
                             <label class="form-group has-float-label">
@@ -40,10 +40,35 @@
                             </label>
                             </#if>
 
+                            <#if usr.getGender()??>
+                                <label class="form-group has-float-label">
+                                    <input class="form-control"  value="${usr.getGender()?lower_case}" readonly/>
+                                    <span>gender</span>
+                                </label>
+                            </#if>
+
+                            <#if usr.getSurname()??>
+                                <label class="form-group has-float-label">
+                                    <input class="form-control"  value="${usr.getSurname()}" readonly/>
+                                    <span>surname</span>
+                                </label>
+                            </#if>
+
+                            <#if usr.getMiddlename()??>
+                                <label class="form-group has-float-label">
+                                    <input class="form-control"  value="${usr.getMiddlename()}" readonly/>
+                                    <span>middle name</span>
+                                </label>
+                            </#if>
+
+
+
+
+
                             <label class="form-group has-float-label">
                                 <input class="form-control"  value="${usr.getPhone()}" name="phone" id="phone-number"
                                        data-mask="+7(700)-000-00-00"/>
-                                <span>Phone number</span>
+                                <span>phone number</span>
                             </label>
                             <input type="hidden" name="_csrf" value="${_csrf.token}" />
 

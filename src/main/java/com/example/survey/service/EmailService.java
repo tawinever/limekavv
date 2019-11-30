@@ -26,6 +26,6 @@ public class EmailService {
     public String textBuilder(String login, String password) {
         return "Hello! Go to this website: " + loginUrl + "\n" +
                 "Your login: " + login + "\n" +
-                "Your password" + password;
+                "Your password " + password;
     }
 }

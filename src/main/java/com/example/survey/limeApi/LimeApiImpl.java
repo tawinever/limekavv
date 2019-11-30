@@ -23,24 +23,40 @@ public class LimeApiImpl implements LimeApi{
     @Autowired
     LimeGetSurveyLanguageService limeGetSurveyLanguageService;
 
-    @Override
-    public String addRespondentToInitSurvey(String email, String name) throws CannotAuthenticateException, CannotAddParticipantException {
-        String surveyUrl = limeAddParticipantService.addParticipant(authenticate(), email, name);
-        log.info("IN LimeApi - addRespondentToSurvey. Survey Url : {}", surveyUrl);
-        return surveyUrl;
-    }
+    private String sessionKey;
 
-    private String authenticate() throws CannotAuthenticateException {
-        String sessionKey = limeAuthenticationService.getSessionKey();
-        log.info("IN LimeApi - addRespondentToSurvey. Session Key : {}", sessionKey);
-        return sessionKey;
+    @Override
+    public String addRespondentToSurvey(String email, String name, int surveyId) throws CannotAuthenticateException, CannotAddParticipantException {
+        authenticate();
+
+        String surveyUrl = limeAddParticipantService.addRespondent(sessionKey, email, name, surveyId);
+
+        log.info("IN LimeApi - addRespondentToSurvey. Survey Url : {}", surveyUrl);
+
+        logout();
+        return surveyUrl;
     }
 
     @Override
     public String getSurveyTitle(int surveyId) throws CannotAuthenticateException, CannotParseException, FailedHttpRequestException {
-        String surveyTitle = limeGetSurveyLanguageService.getSurveyTitle(authenticate(), surveyId);
-        log.info("IN LimeApi - addRespondentToSurvey. Survey Url : {}", surveyTitle);
+        authenticate();
+
+        String surveyTitle = limeGetSurveyLanguageService.getSurveyTitle(sessionKey, surveyId);
+
+        log.info("IN LimeApi - getSurveyTitle. Survey title : {}", surveyTitle);
+
+        logout();
         return surveyTitle;
+    }
+
+    private void authenticate() throws CannotAuthenticateException {
+        this.sessionKey = limeAuthenticationService.getSessionKey();
+        log.info("IN LimeApi - authenticate - getting Session Key : {}", this.sessionKey);
+    }
+
+    private void logout() {
+        limeAuthenticationService.logout(this.sessionKey);
+        log.info("IN LimeApi - logout - releasing Session Key : {}", this.sessionKey);
     }
 
 }

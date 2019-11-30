@@ -37,14 +37,14 @@ public class SurveyService {
     @Value("${lime.start.id}")
     protected String initSurveyId;
 
-    public void inviteUserToSurvey(Long userId) throws InvalidArgumentException, CannotAuthenticateException, CannotAddParticipantException, CannotParseException, FailedHttpRequestException {
-        User user = userRepository.findById((long) userId).orElse(null);
+    public void inviteUserToSurvey(Long userId, int limeId) throws InvalidArgumentException, CannotAuthenticateException, CannotAddParticipantException, CannotParseException, FailedHttpRequestException {
+        User user = userRepository.findById(userId).orElse(null);
         if (user == null )  throw new InvalidArgumentException(new String[]{"There is no user with such ID"});
 
         String url = "default";
 
         Ticket ticket = new Ticket();
-        ticket.setSurveyId(getSurveyId(Integer.parseInt(initSurveyId)));
+        ticket.setSurveyId(getSurveyId(limeId));
         ticket.setUserId(userId);
         ticket.setStatus(TicketStatus.NEW);
         ticket.setUrl(url);
@@ -57,7 +57,7 @@ public class SurveyService {
         }
 
         try {
-            url = limeApi.addRespondentToInitSurvey(user.getEmail(), user.getName());
+            url = limeApi.addRespondentToSurvey(user.getEmail(), user.getName(), limeId);
         } catch (Exception e) {
             ticketRepository.delete(ticket);
             throw e;
@@ -70,6 +70,8 @@ public class SurveyService {
     private Integer getSurveyId(int limeId) throws FailedHttpRequestException, CannotParseException, CannotAuthenticateException {
         Survey survey = surveyRepository.findByLimeId(limeId);
         if (survey == null) {
+
+
             survey = new Survey();
             survey.setLimeId(limeId);
             survey.setTitle(limeApi.getSurveyTitle(limeId));

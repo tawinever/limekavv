@@ -27,7 +27,11 @@ public class MoneyTransfer {
 
     private String operationId;
 
-    private String surveyId;
+    private int surveyId;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "surveyId", referencedColumnName = "id", insertable=false, updatable=false)
+    private Survey survey;
 
     @Enumerated(EnumType.ORDINAL)
     private MoneyTransferStatus status;

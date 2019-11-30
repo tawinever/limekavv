@@ -2,339 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06445f07-abbe-43bc-8a11-670cdab52c72" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/controller/PromoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/domain/Survey.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/domain/Ticket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/domain/TicketStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/dto/IinDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/dto/PromoUserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/dto/validator/AdvancedIin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/dto/validator/IinValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/dto/validator/UniqueEmail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/dto/validator/UserEmailValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/limeApi/LimeApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/limeApi/LimeApiImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/limeApi/exception/CannotAddParticipantException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/limeApi/exception/CannotAuthenticateException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/limeApi/exception/CannotParseException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/limeApi/exception/FailedHttpRequestException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/limeApi/helper/LimeRestOptionsProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/limeApi/model/ResultToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/limeApi/model/SessionKey.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/limeApi/model/SurveyLanguageDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/limeApi/model/SurveyLanguageDetailsWrapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/limeApi/model/Token.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/limeApi/service/LimeAddParticipantService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/limeApi/service/LimeAuthenticationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/limeApi/service/LimeGetSurveyLanguageService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/limeApi/service/base/LimeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/repository/SurveyRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/repository/TicketRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/service/EmailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/service/SurveyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/blocked.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/confirmed.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/promo.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/dto/UserDetailsDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/limeApi/dto/SurveyDetailsDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/doc/Оферта_25.11.19 (1).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/doc/Оферта_25.11.19.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/d458ebf6-00b4-4f28-b0f0-44a6f4a21bf3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d458ebf6-00b4-4f28-b0f0-44a6f4a21bf3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/d458ebf6-00b4-4f28-b0f0-44a6f4a21bf3/storage_v2/_src_/database/lime_cabinet.7hO5fw/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d458ebf6-00b4-4f28-b0f0-44a6f4a21bf3/storage_v2/_src_/database/lime_cabinet.7hO5fw/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/survey/config/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/config/MvcConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/survey/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/config/WebSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/survey/controller/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/controller/ApiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/survey/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/survey/controller/MoneyTransferController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/controller/MoneyTransferController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/survey/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/survey/service/MoneyTransferService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/service/MoneyTransferService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/survey/withdrawal/wooppay/Service/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/withdrawal/wooppay/Service/AuthenticationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/survey/controller/PromoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/controller/PromoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/survey/domain/MoneyTransfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/domain/MoneyTransfer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/survey/dto/IinDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/survey/dto/validator/IinValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/dto/validator/IinValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/survey/limeApi/LimeApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/limeApi/LimeApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/survey/limeApi/LimeApiImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/limeApi/LimeApiImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/survey/limeApi/service/LimeAddParticipantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/limeApi/service/LimeAddParticipantService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/survey/limeApi/service/LimeAuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/limeApi/service/LimeAuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/survey/repository/TicketRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/repository/TicketRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/survey/service/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/service/EmailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/survey/service/SurveyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/survey/service/SurveyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/liquibase/db.changelog-1.0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/liquibase/db.changelog-1.0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/common.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/common.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blocked.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/blocked.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/profile.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/profile.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/promo.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/promo.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-dev.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/survey/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/survey/config/WebSecurityConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/survey/controller/ApiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/survey/controller/ApiController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/survey/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/survey/controller/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/survey/controller/MoneyTransferController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/survey/controller/MoneyTransferController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/survey/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/survey/domain/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/survey/service/MoneyTransferService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/survey/service/MoneyTransferService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/survey/withdrawal/wooppay/Service/AuthenticationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/survey/withdrawal/wooppay/Service/AuthenticationService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/survey/controller/PromoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/survey/controller/PromoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/survey/dto/IinDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/survey/limeApi/LimeApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/survey/limeApi/LimeApi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/survey/limeApi/LimeApiImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/survey/limeApi/LimeApiImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/survey/limeApi/service/LimeAddParticipantService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/survey/limeApi/service/LimeAddParticipantService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/survey/limeApi/service/LimeAuthenticationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/survey/limeApi/service/LimeAuthenticationService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/survey/repository/TicketRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/survey/repository/TicketRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/survey/service/EmailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/survey/service/EmailService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/survey/service/SurveyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/survey/service/SurveyService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/liquibase/db.changelog-1.0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/liquibase/db.changelog-1.0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/dore.dark.blue.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/dore.dark.blue.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/dore.dark.blue.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/dore.dark.blue.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/dore.light.blue.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/dore.light.blue.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/sass/_dore.style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/sass/_dore.style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/sass/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/sass/_mixins.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/sass/themes/dore.dark.blue.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/sass/themes/dore.dark.blue.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/sass/themes/dore.dark.green.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/sass/themes/dore.dark.green.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/sass/themes/dore.dark.orange.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/sass/themes/dore.dark.orange.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/sass/themes/dore.dark.purple.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/sass/themes/dore.dark.purple.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/sass/themes/dore.dark.red.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/sass/themes/dore.dark.red.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/sass/themes/dore.light.blue.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/sass/themes/dore.light.blue.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/sass/themes/dore.light.green.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/sass/themes/dore.light.green.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/sass/themes/dore.light.orange.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/sass/themes/dore.light.orange.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/sass/themes/dore.light.purple.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/sass/themes/dore.light.purple.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/sass/themes/dore.light.red.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/sass/themes/dore.light.red.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/vendor/bootstrap-datepicker.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/vendor/bootstrap-datepicker.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/vendor/bootstrap-datepicker3.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/vendor/bootstrap-datepicker3.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/vendor/bootstrap-float-label.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/vendor/bootstrap-float-label.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/vendor/bootstrap-stars.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/vendor/bootstrap-stars.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/vendor/bootstrap-tagsinput.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/vendor/bootstrap-tagsinput.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/vendor/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/vendor/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/vendor/component-custom-switch.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/vendor/component-custom-switch.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/vendor/cropper.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/vendor/cropper.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/vendor/dataTables.bootstrap4.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/vendor/dataTables.bootstrap4.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/vendor/datatables.responsive.bootstrap4.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/vendor/datatables.responsive.bootstrap4.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/vendor/dropzone.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/vendor/dropzone.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/vendor/fullcalendar.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/vendor/fullcalendar.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/vendor/jquery.contextMenu.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/vendor/jquery.contextMenu.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/vendor/jquery.dataTables.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/vendor/jquery.dataTables.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/vendor/nouislider.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/vendor/nouislider.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/vendor/owl.carousel.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/vendor/owl.carousel.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/vendor/perfect-scrollbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/vendor/perfect-scrollbar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/vendor/quill.bubble.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/vendor/quill.bubble.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/vendor/quill.snow.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/vendor/quill.snow.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/vendor/select2-bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/vendor/select2-bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/vendor/select2.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/vendor/select2.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/vendor/slick.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/vendor/slick.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/vendor/video-js.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/vendor/video-js.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font/iconsmind/icomoon.eot" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/font/iconsmind/icomoon.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font/iconsmind/icomoon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/font/iconsmind/icomoon.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font/iconsmind/icomoon.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/font/iconsmind/icomoon.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font/iconsmind/icomoon.woff" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/font/iconsmind/icomoon.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font/iconsmind/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/font/iconsmind/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font/simple-line-icons/LICENSE.md" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/font/simple-line-icons/LICENSE.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font/simple-line-icons/css/simple-line-icons.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/font/simple-line-icons/css/simple-line-icons.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font/simple-line-icons/fonts/Simple-Line-Icons.eot" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/font/simple-line-icons/fonts/Simple-Line-Icons.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font/simple-line-icons/fonts/Simple-Line-Icons.svg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/font/simple-line-icons/fonts/Simple-Line-Icons.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font/simple-line-icons/fonts/Simple-Line-Icons.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/font/simple-line-icons/fonts/Simple-Line-Icons.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font/simple-line-icons/fonts/Simple-Line-Icons.woff" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/font/simple-line-icons/fonts/Simple-Line-Icons.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/font/simple-line-icons/fonts/Simple-Line-Icons.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/font/simple-line-icons/fonts/Simple-Line-Icons.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/balloon.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/balloon.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/bebinca-thumb.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/bebinca-thumb.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/big-buck-bunny-poster.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/big-buck-bunny-poster.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/card-thumb-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/card-thumb-1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/card-thumb-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/card-thumb-2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/card-thumb-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/card-thumb-3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/card-thumb-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/card-thumb-4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/carousel-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/carousel-1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/carousel-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/carousel-2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/carousel-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/carousel-3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/cheesecake-thumb.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/cheesecake-thumb.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/chocolate-cake-thumb.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/chocolate-cake-thumb.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/coconut-cake.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/coconut-cake.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/cremeschnitte-thumb.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/cremeschnitte-thumb.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/detail.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/detail.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/fat-rascal-thumb.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/fat-rascal-thumb.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/financier-thumb.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/financier-thumb.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/fruitcake-thumb.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/fruitcake-thumb.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/genoise-thumb.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/genoise-thumb.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/gingerbread-thumb.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/gingerbread-thumb.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/goose-breast-thumb.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/goose-breast-thumb.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/application-chat.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/application-chat.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/application-library.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/application-library.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/application-survey.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/application-survey.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/application-todo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/application-todo.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/blog-thumb-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/blog-thumb-1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/blog-thumb-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/blog-thumb-2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/blog-thumb-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/blog-thumb-3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/blog-thumb-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/blog-thumb-4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/blog-thumb-5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/blog-thumb-5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/careers-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/careers-1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/careers-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/careers-2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/careers-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/careers-3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/careers-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/careers-4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/careers-5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/careers-5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/careers-6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/careers-6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/careers-7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/careers-7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/client-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/client-1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/client-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/client-2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/client-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/client-3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/client-4.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/client-4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/client-5.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/client-5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/client-6.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/client-6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/dark-background-bottom.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/dark-background-bottom.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/dark-background-top.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/dark-background-top.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/feature-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/feature-2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/feature-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/feature-3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/feature.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/feature.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/footer-background-blue-dark.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/footer-background-blue-dark.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/footer-background-blue.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/footer-background-blue.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/footer-background-green-dark.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/footer-background-green-dark.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/footer-background-green.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/footer-background-green.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/footer-background-orange-dark.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/footer-background-orange-dark.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/footer-background-orange.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/footer-background-orange.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/footer-background-purple-dark.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/footer-background-purple-dark.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/footer-background-purple.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/footer-background-purple.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/footer-background-red-dark.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/footer-background-red-dark.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/footer-background-red.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/footer-background-red.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/home-background-blue-dark.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/home-background-blue-dark.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/home-background-blue.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/home-background-blue.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/home-background-green-dark.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/home-background-green-dark.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/home-background-green.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/home-background-green.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/home-background-orange-dark.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/home-background-orange-dark.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/home-background-orange.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/home-background-orange.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/home-background-purple-dark.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/home-background-purple-dark.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/home-background-purple.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/home-background-purple.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/home-background-red-dark.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/home-background-red-dark.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/home-background-red.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/home-background-red.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/home-hero-mobile.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/home-hero-mobile.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/home-hero.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/home-hero.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/logo-footer.svg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/logo-footer.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/sub-background-blue-dark.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/sub-background-blue-dark.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/sub-background-blue.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/sub-background-blue.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/sub-background-green-dark.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/sub-background-green-dark.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/sub-background-green.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/sub-background-green.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/sub-background-orange-dark.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/sub-background-orange-dark.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/sub-background-orange.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/sub-background-orange.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/sub-background-purple-dark.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/sub-background-purple-dark.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/sub-background-purple.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/sub-background-purple.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/sub-background-red-dark.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/sub-background-red-dark.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/sub-background-red.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/sub-background-red.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/subpage-image.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/subpage-image.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/subpage-video-poster.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/subpage-video-poster.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/team-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/team-1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/team-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/team-2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/team-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/team-3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/team-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/team-4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/team-5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/team-5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/values-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/values-1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/values-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/values-2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/values-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/values-3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/values-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/values-4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/values-5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/values-5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/values-6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/values-6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/values-7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/values-7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/values-8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/values-8.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/white-background-bottom.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/white-background-bottom.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/landing-page/white-background-top.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/landing-page/white-background-top.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/login-balloon.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/login-balloon.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/logo-mobile.svg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/logo-mobile.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/logo-white.svg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/logo-white.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/magdalena-thumb.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/magdalena-thumb.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/marble-cake-thumb.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/marble-cake-thumb.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/menu-left.svg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/menu-left.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/menu-right.svg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/menu-right.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/menu-single.svg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/menu-single.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/merveilleux-thumb.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/merveilleux-thumb.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/napoleonshat-thumb.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/napoleonshat-thumb.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/notification-thumb-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/notification-thumb-2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/notification-thumb-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/notification-thumb-3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/notification-thumb.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/notification-thumb.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/pargin-thumb.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/pargin-thumb.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/parkin-thumb.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/parkin-thumb.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/petit-gateau-thumb.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/petit-gateau-thumb.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/plane.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/plane.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/profile-pic-l-10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/profile-pic-l-10.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/profile-pic-l-11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/profile-pic-l-11.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/profile-pic-l-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/profile-pic-l-2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/profile-pic-l-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/profile-pic-l-3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/profile-pic-l-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/profile-pic-l-4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/profile-pic-l-5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/profile-pic-l-5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/profile-pic-l-6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/profile-pic-l-6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/profile-pic-l-7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/profile-pic-l-7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/profile-pic-l-8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/profile-pic-l-8.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/profile-pic-l-9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/profile-pic-l-9.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/profile-pic-l.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/profile-pic-l.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/salzburger-nockerl-thumb.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/salzburger-nockerl-thumb.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/souffle-thumb.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/souffle-thumb.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/streuselkuchen-thumb.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/streuselkuchen-thumb.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/tea-loaf-thumb.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/tea-loaf-thumb.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/thumb-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/thumb-1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/thumb-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/thumb-2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/thumb-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/thumb-3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/thumb-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/img/thumb-4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/dore-plugins/select.from.library.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/dore-plugins/select.from.library.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/dore.script.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/dore.script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/dore.scripts.landingpage.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/dore.scripts.landingpage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/scripts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/scripts.single.theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/scripts.single.theme.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/Chart.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/Chart.bundle.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/Sortable.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/Sortable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/bootstrap-datepicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/bootstrap-datepicker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/bootstrap-notify.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/bootstrap-notify.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/bootstrap-tagsinput.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/bootstrap-tagsinput.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/bootstrap.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/bootstrap.bundle.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/chartjs-plugin-datalabels.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/chartjs-plugin-datalabels.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/LICENSE.md" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/LICENSE.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/ckeditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/ckeditor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/ckeditor.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/ckeditor.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/ar.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/ar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/ast.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/ast.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/bg.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/bg.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/ca.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/ca.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/cs.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/cs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/da.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/da.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/de.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/de.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/el.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/el.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/en-au.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/en-au.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/eo.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/eo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/es.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/es.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/et.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/et.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/eu.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/eu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/fa.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/fa.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/fi.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/fi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/fr.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/fr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/gl.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/gl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/gu.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/gu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/hr.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/hr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/hu.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/hu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/it.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/it.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/ja.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/ja.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/km.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/km.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/kn.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/kn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/ko.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/ko.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/ku.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/ku.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/nb.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/nb.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/ne.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/ne.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/nl.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/nl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/no.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/no.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/oc.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/oc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/pl.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/pl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/pt-br.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/pt-br.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/pt.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/pt.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/ro.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/ro.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/ru.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/ru.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/si.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/si.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/sk.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/sk.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/sq.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/sq.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/sv.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/sv.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/tr.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/tr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/tt.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/tt.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/ug.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/ug.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/uk.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/uk.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/zh-cn.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/zh-cn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/zh.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/ckeditor5-build-classic/translations/zh.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/cropper.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/cropper.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/datatables.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/datatables.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/dropzone.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/dropzone.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/fullcalendar.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/fullcalendar.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/jquery-3.3.1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/jquery-3.3.1.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/jquery.barrating.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/jquery.barrating.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/jquery.contextMenu.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/jquery.contextMenu.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/landing-page/headroom.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/landing-page/headroom.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/landing-page/jQuery.headroom.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/landing-page/jQuery.headroom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/landing-page/jquery.autoellipsis.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/landing-page/jquery.autoellipsis.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/landing-page/jquery.scrollTo.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/landing-page/jquery.scrollTo.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/moment.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/moment.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/mousetrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/mousetrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/mousetrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/mousetrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/nouislider.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/nouislider.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/owl.carousel.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/owl.carousel.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/perfect-scrollbar.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/perfect-scrollbar.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/progressbar.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/progressbar.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/quill.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/quill.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/select2.full.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/select2.full.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/slick.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/slick.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/typeahead.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/typeahead.bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/video.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/video.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vendor/videojs-youtube.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/vendor/videojs-youtube.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/parts/common.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/parts/common.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/blocked.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/blocked.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/profile.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/profile.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/promo.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/promo.ftl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -403,6 +113,7 @@
         <option value="JavaScript File" />
         <option value="Interface" />
         <option value="Enum" />
+        <option value="JUnit4 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -431,6 +142,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/example/survey/limeApi/service" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -439,12 +152,18 @@
     <property name="settings.editor.selected.configurable" value="database.main" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example.survey.dto.validator" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/templates/error" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/doc" />
       <recent name="$PROJECT_DIR$/src/main/resources/static" />
+      <recent name="$PROJECT_DIR$/src/main/resources/templates/error" />
       <recent name="$PROJECT_DIR$/src/main/resources/static/js/vendor" />
       <recent name="$PROJECT_DIR$/src/main/resources/static/img" />
-      <recent name="$PROJECT_DIR$/src/main/resources/static/font" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.example.survey.payment" />
@@ -478,7 +197,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.Application">
+    <configuration name="IinValidatorTest.isValid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="survey" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.survey.dto.validator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.survey.dto.validator" />
+      <option name="MAIN_CLASS_NAME" value="com.example.survey.dto.validator.IinValidatorTest" />
+      <option name="METHOD_NAME" value="isValid" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="survey" />
       <extension name="coverage">
@@ -497,6 +232,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.Application" />
+        <item itemvalue="JUnit.IinValidatorTest.isValid" />
       </list>
     </recent_temporary>
   </component>
@@ -512,7 +248,12 @@
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
               <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@56b5a2a9" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@c35311" type="9fbbdea:ServiceModel$ServiceNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@26d8723e" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@56b5a2a9" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@1b3aee64" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
           </expand>
           <select />
@@ -562,7 +303,7 @@
       <workItem from="1574819762385" duration="20098000" />
       <workItem from="1574864036173" duration="4569000" />
       <workItem from="1574934233553" duration="222000" />
-      <workItem from="1574934682281" duration="18078000" />
+      <workItem from="1574934682281" duration="34833000" />
     </task>
     <servers />
   </component>

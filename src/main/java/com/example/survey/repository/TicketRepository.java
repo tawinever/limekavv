@@ -5,4 +5,5 @@ import com.example.survey.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface TicketRepository extends JpaRepository<Ticket, Long> {
+    Ticket findByUserIdAndSurveyId(Long userId, int surveyId);
 }

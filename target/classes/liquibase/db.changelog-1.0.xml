@@ -45,6 +45,23 @@
         </createTable>
     </changeSet>
 
+    <changeSet id="create Table Survey" author="rauan">
+        <comment>Создаем таблицу для опросов. Это опросы о котором знает Джава система</comment>
+        <createTable tableName="survey">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+
+            <column name="lime_id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="title" type="VARCHAR(255)">
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+    </changeSet>
+
     <changeSet id="create Table Money Transfer" author="rauan">
         <comment>Создаем таблицу для хранение записи о пополнение и снятие денег</comment>
         <createTable tableName="money_transfer">
@@ -70,7 +87,9 @@
 
             <column name="operation_id" type="VARCHAR(255)" />
 
-            <column name="survey_id" type="VARCHAR(255)" />
+            <column name="survey_id" type="BIGINT" >
+                <constraints nullable="true" foreignKeyName="fk_money_transfer_survey" references="survey(id)" />
+            </column>
 
             <column name="status" type="BIGINT" >
                 <constraints nullable="false" />
@@ -108,23 +127,6 @@
 
 
         </insert>
-    </changeSet>
-
-    <changeSet id="create Table Survey" author="rauan">
-        <comment>Создаем таблицу для опросов. Это опросы о котором знает Джава система</comment>
-        <createTable tableName="survey">
-            <column name="id" type="BIGINT" autoIncrement="true">
-                <constraints primaryKey="true" nullable="false" />
-            </column>
-
-            <column name="lime_id" type="BIGINT" autoIncrement="true">
-                <constraints nullable="false" />
-            </column>
-
-            <column name="title" type="VARCHAR(255)">
-                <constraints nullable="false" />
-            </column>
-        </createTable>
     </changeSet>
 
     <changeSet author="rauan" id="create Table Ticket">

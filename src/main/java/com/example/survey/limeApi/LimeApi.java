@@ -6,7 +6,9 @@ import com.example.survey.limeApi.exception.CannotParseException;
 import com.example.survey.limeApi.exception.FailedHttpRequestException;
 
 public interface LimeApi {
-    String addRespondentToInitSurvey(String email, String name) throws CannotAuthenticateException, CannotAddParticipantException;
+    String addRespondentToSurvey(String email, String name, int surveyId) throws CannotAuthenticateException, CannotAddParticipantException;
 
     String getSurveyTitle(int surveyId) throws CannotAuthenticateException, CannotParseException, FailedHttpRequestException;
+
+
 }

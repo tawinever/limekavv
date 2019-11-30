@@ -1,26 +1,30 @@
 package com.example.survey.controller;
 
+import com.example.survey.domain.Gender;
 import com.example.survey.domain.User;
-import com.example.survey.dto.IinDto;
+import com.example.survey.dto.UserDetailsDto;
 import com.example.survey.dto.MoneyTransferDto;
 import com.example.survey.dto.ProfileDto;
 import com.example.survey.service.MoneyTransferService;
 import com.example.survey.withdrawal.WithdrawalService;
 import com.example.survey.repository.UserRepository;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.context.support.DefaultMessageSourceResolvable;
 import org.springframework.http.MediaType;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.validation.Valid;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Slf4j
 @Controller
@@ -78,19 +82,35 @@ public class MainController {
     }
 
     @PostMapping(value = "/updateIin", consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
-    public ModelAndView setIin(
+    public String setIin(
             @AuthenticationPrincipal UserDetails user,
             Model model,
-            @Valid IinDto iin) {
+            @Valid UserDetailsDto userDetailsDto,
+            BindingResult bindingResult,
+            RedirectAttributes redirectAttributes) {
+
+        log.info("IN MainController - setIin");
+
+        if (bindingResult.hasErrors()) {
+            redirectAttributes.addFlashAttribute("errors",
+                    bindingResult.getFieldErrors().stream()
+                            .map(DefaultMessageSourceResolvable::getDefaultMessage).collect(Collectors.toList()));
+            return "redirect:/transfer";
+        }
+
         User curUser = userRepository.findByEmail(user.getUsername());
 
         if (curUser.getIin() != null) {
-            return new ModelAndView("redirect:/profile");
+            return "redirect:/profile";
         }
-        curUser.setIin(iin.getIin());
+
+        curUser.setIin(userDetailsDto.getIin());
+        curUser.setGender(Gender.values()[userDetailsDto.getGender()]);
+        curUser.setSurname(userDetailsDto.getSurname());
+        curUser.setMiddlename(userDetailsDto.getMiddlename());
         userRepository.save(curUser);
 
-        return new ModelAndView("redirect:/profile");
+        return "redirect:/profile";
     }
 
 
